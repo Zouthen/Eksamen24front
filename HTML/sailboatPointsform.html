@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SailboatPointsform</title>
+
+  <link rel="stylesheet" href="../CSS/Stylesheet.css">
+</head>
+<body>
+<div id="sailboatBox">
+  <h1>Sailboat Points</h1>
+
+    <label for="boatid">Sailboat ID:</label>
+    <input type="number" id="boatid" name="id" required><br><br>
+
+    <label for="points">Points:</label>
+    <input type="text" id="points" name="points" required
+           pattern="[0-9]{10,10}"
+           oninvalid="this.setCustomValidity('Enter a number')"
+           onkeyup="setCustomValidity('')"> <br><br>
+
+    <button type="button" id="submit-btn-points" onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Give points</button><br><br>
+    <button onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Cancel</button>
+
+
+  <h1>Sailboat List</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Boat type</th>
+      <th>Points</th>
+    </tr>
+    </thead>
+    <tbody id="sailboat-list">
+    <!-- Sailboats will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+<script src="../JS/fetchany.js"></script>
+<script src="../JS/sailboatPointsform.js"></script>
+<script src="../JS/createTables.js"></script>
+</body>
+</html>

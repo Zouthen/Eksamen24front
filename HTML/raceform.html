@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Race</title>
+
+    <link rel="stylesheet" href="../CSS/Stylesheet.css">
+</head>
+<body>
+<div id="raceBox">
+  <h1>Race Creator</h1>
+
+  <form id="race-form">
+
+    <label for="raceNumber">Race Number:</label>
+    <input type="number" required id="raceNumber" name="raceNumber"><br><br>
+
+    <label for="boattypeRace">Boat type:</label>
+    <select id="boattypeRace" name="boattype" required>
+      <option disabled selected value>Enter boat type</option>
+      <option value="shorter than 25 feet">Shorter than 25 feet</option>
+      <option value="25-40 feet">25-40 feet</option>
+      <option value="Longer than 40 feet">Longer than 40 feet</option>
+    </select> <br><br>
+
+    <button type="submit" id="submit-btn-Race" onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Create Race</button><br><br>
+    <button type="button" id="createAllRaces" onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Create all races for the season</button><br><br>
+    <button onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Cancel</button>
+
+
+  </form>
+
+  <h1>Race List</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Race number</th>
+      <th>Boat type</th>
+    </tr>
+    </thead>
+    <tbody id="race-list">
+    <!-- Races will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+
+<script src="../JS/fetchany.js"></script>
+<script src="../JS/raceform.js"></script>
+<script src="../JS/createTables.js"></script>
+</body>
+</html>

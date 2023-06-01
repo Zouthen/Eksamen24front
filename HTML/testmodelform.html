@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test model Creator</title>
+</head>
+<body>
+<h1>Test model Creator</h1>
+<form id="testmodel-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age"><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br>
+
+    <button type="submit" id="submit-btn">Create testmodel</button>
+</form>
+
+<h1>Test List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody id="testmodel-list">
+    <!-- testmodel items will be dynamically added here -->
+    </tbody>
+</table>
+
+<script src="../JS/fetchany.js"></script>
+<script src="../JS/testmodelform.js"></script>
+
+</body>
+</html>

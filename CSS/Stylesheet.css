@@ -1,0 +1,44 @@
+body {
+    background-color: gray;
+    font-size: 130%;
+}
+
+#sailboatBox {
+    margin-top: 10%;
+    margin-left: 40%;
+}
+#raceBox {
+    margin-top: 10%;
+    margin-left: 40%;
+}
+
+#race_sailboat_lists {
+    float: left;
+    margin-left: 100px;
+
+}
+
+#pagebox {
+    margin-top: 3%;
+
+}
+
+#addToRaceBox {
+    float: right;
+    margin-right: 100px;
+}
+
+#racelist {
+    float: left;
+    margin-left: 100px;
+}
+#sailboatlist {
+    float: left;
+    margin-left: 100px;
+}
+
+#raceswithsailboats{
+    float: left;
+    margin-left: 100px;
+}
+
