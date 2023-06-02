@@ -10,7 +10,6 @@ function createFormEventListener(){
 }
 
 async function handleFormSubmit(event) {
-    //Vi handler submitten her i stedet for default html behaviour
     event.preventDefault();
     const formData = new FormData(formSailboat);
     console.log("vi er i handleFormSubmit sailboat")
@@ -20,7 +19,6 @@ async function handleFormSubmit(event) {
     try {
         const responseData = await postFormDataAsJson(urlPostSailboat, jsonToPost);
         console.log(responseData)
-        //her kan man indsæt nyt product i tabellen
         actionFetchSailboats()
     } catch (error) {
         alert(error.message);

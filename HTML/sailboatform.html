@@ -8,34 +8,37 @@
 </head>
 <body>
 <div id="sailboatBox">
-<h1>Sailboat Creator</h1>
-<form id="sailboat-form">
+    <h1>Sailboat Creator</h1>
+    <form id="sailboat-form">
 
-  <label for="boattype">Boat type:</label><br>
-  <select id="boattype" name="boattype" required>
-    <option disabled selected value>Enter boat type</option>
-    <option value="shorter than 25 feet">Shorter than 25 feet</option>
-    <option value="25-40 feet">25-40 feet</option>
-    <option value="Longer than 40 feet">Longer than 40 feet</option>
-  </select> <br><br>
+        <label for="boattype">Boat type:</label><br>
+        <select id="boattype" name="boattype" required>
+            <option disabled selected value>Enter boat type</option>
+            <option value="shorter than 25 feet">Shorter than 25 feet</option>
+            <option value="25-40 feet">25-40 feet</option>
+            <option value="Longer than 40 feet">Longer than 40 feet</option>
+        </select> <br><br>
 
-  <button type="submit" id="submit-btn" onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Create Sailboat</button><br><br>
-  <button onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Cancel</button>
-</form>
+        <button type="submit" id="submit-btn" onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Create
+            Sailboat
+        </button>
+        <br><br>
+        <button onclick="window.location.href = '../HTML/sailboatsAndRaces.html'">Cancel</button>
+    </form>
 
-<h1>Sailboat List</h1>
-<table>
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Boat type</th>
-    <th>Points</th>
-  </tr>
-  </thead>
-  <tbody id="sailboat-list">
-  <!-- Sailboats will be dynamically added here -->
-  </tbody>
-</table>
+    <h1>Sailboat List</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Boat type</th>
+            <th>Points</th>
+        </tr>
+        </thead>
+        <tbody id="sailboat-list">
+        <!-- Sailboats will be dynamically added here -->
+        </tbody>
+    </table>
 </div>
 <script src="../JS/fetchany.js"></script>
 <script src="../JS/sailboatform.js"></script>

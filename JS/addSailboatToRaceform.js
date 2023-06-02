@@ -16,14 +16,12 @@ async function restAddSailboatToRace(raceid, boatid) {
         },
         body: ""
     }
-    //calls backend and wait for return
     const response = await fetch(url, fetchOptions);
     console.log(response);
     if (!response.ok) {
         console.log("Add to race failed");
         alert("One or more of the ID's are not valid")
     }
-    //actionFetchSailboatsAdded()
     return response;
 }
 

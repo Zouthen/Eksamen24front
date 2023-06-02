@@ -52,18 +52,11 @@
 
     <h1>Add Sailboat to Race</h1>
 
-
     <label for="raceID">Race ID:</label>
     <input type="number" required id="raceID" name="id"><br><br>
 
     <label for="boatid">Sailboat ID:</label>
     <input type="number" id="boatid" name="id" required><br><br>
-
-    <!--
-    pattern="[0-9]{10,10}"
-    oninvalid="this.setCustomValidity('Enter a Sailboat ID')"
-    onkeyup="setCustomValidity('')"
-    -->
 
     <button type="submit" id="submit-btn-addToRace">Add Sailboat to Race</button>
 
@@ -81,7 +74,7 @@
         </tr>
         </thead>
         <tbody id="raceswithsailboats-list">
-        <!-- Sailboats will be dynamically added here -->
+        <!-- Races with sailboats will be dynamically added here -->
         </tbody>
     </table>
 </div>
@@ -97,6 +90,7 @@
     fetch(urlGetRacesWithSailboats)
         .then(response => response.json())
         .then(data => {
+            console.log('Success:', data);
             // Access the table body
             const tableBody = document.getElementById('raceswithsailboats-list');
 
@@ -106,19 +100,18 @@
                 const raceNameCell = document.createElement('td');
                 raceNameCell.textContent = race.id;
                 const sailboatCountCell = document.createElement('td');
-                sailboatCountCell.textContent = race.sailboats.textContent
 
+                // Cant find a way to get the sailboat id from the fetched data
+                sailboatCountCell.textContent = "";
                 row.appendChild(raceNameCell);
                 row.appendChild(sailboatCountCell);
                 tableBody.appendChild(row);
-
 
 
             });
 
         })
         .catch(error => {
-            // Handle any errors
             console.error('Error:', error);
         });
 </script>
